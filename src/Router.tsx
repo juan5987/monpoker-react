@@ -5,7 +5,6 @@ import Home from './pages/Home';
 
 const Router = () => {
     return (
-        <div className="app">
           <BrowserRouter>
             <Layout>
               <Routes>
@@ -13,7 +12,6 @@ const Router = () => {
               </Routes>
             </Layout>
           </BrowserRouter>
-        </div>
       );
 }
 
