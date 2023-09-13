@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from '../assets/logo_rouge.png'
+import logo from '../assets/logo_white.png'
 import '../styles/header.sass';
 import '../styles/header-desktop.sass';
 
