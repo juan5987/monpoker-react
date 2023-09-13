@@ -1,5 +1,6 @@
 import React from 'react'
-import '../styles/tournaments.sass'
+import Tournament from './components/Tournament'
+import '../../styles/tournaments.sass'
 
 const Home = () => {
   return (
@@ -8,7 +9,7 @@ const Home = () => {
         <h2 className='tournaments__title__text'>Mes tournois</h2>
       </div>
       <section className="tournaments__searchbar">
-        <input type="text" className="tournaments__searchbar__input" id="searchbar" name="searchbar" placeholder='rechercher un tournoi' />
+        <input type="text" className="tournaments__searchbar__input" id="searchbar" name="searchbar" placeholder='rechercher un tournoi par nom' />
       </section>
       <section className="tournaments__filters">
         <div className="tournaments__filters__element">
@@ -28,6 +29,39 @@ const Home = () => {
             <option value="descending" className="tournaments__filters__element__select__option">décroissant</option>
           </select>
         </div>
+      </section>
+      <section className="tournaments__legend">
+          <div className="tournaments__legend__element">
+            <div className="tournaments__legend__element__box tournaments__legend__element__box--pending"></div>
+            <span className="tournaments__legend__element__text tournaments__legend__element__text--pending">prévu</span>
+          </div>
+          <div className="tournaments__legend__element">
+            <div className="tournaments__legend__element__box tournaments__legend__element__box--finished"></div>
+            <span className="tournaments__legend__element__text tournaments__legend__element__text--finished">terminé</span>
+          </div>
+        </section>
+      <section className="tournaments__tournaments">
+        <Tournament />
+        <Tournament />
+        <Tournament />
+        <Tournament />
+        <Tournament />
+        <Tournament />
+        <Tournament />
+        <Tournament />
+        <Tournament />
+        <Tournament />
+        <Tournament />
+        <Tournament />
+        <Tournament />
+        <Tournament />
+        <Tournament />
+        <Tournament />
+        <Tournament />
+        <Tournament />
+        <Tournament />
+        <Tournament />
+        <Tournament />
       </section>
     </div>
   )

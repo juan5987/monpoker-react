@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from './components/Layout';
 import Home from './pages/Home';
-import Tournaments from './pages/Tournaments';
+import Tournaments from './pages/Tournaments/Tournaments';
 
 const Router = () => {
     return (
