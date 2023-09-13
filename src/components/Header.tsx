@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/logo_white.png'
 import '../styles/header.sass';
 import '../styles/header-desktop.sass';
@@ -6,6 +7,11 @@ import '../styles/header-desktop.sass';
 const Header = () => {
 
   const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false);
+
+  const handleCloseMenu = (e: any) => {
+    e.preventDefault();
+    setIsMenuOpened(false);
+  }
 
   return (
     <>
@@ -16,20 +22,20 @@ const Header = () => {
         </div>
         <nav className="navbar--desktop">
         <ul className="navbar--desktop__list">
-          <li className="navbar--desktop__list__element">
-            <a href="/" className="navbar--desktop__list__element__link">accueil</a>
+          <li className="navbar--desktop__list__element" onClick={handleCloseMenu}>
+            <Link to="/" className="navbar--desktop__list__element__link">accueil</Link>
           </li>
-          <li className="navbar--desktop__list__element">
-            <a href="/meals" className="navbar--desktop__list__element__link">repas</a>
+          <li className="navbar--desktop__list__element" onClick={handleCloseMenu}>
+            <Link to="/meals" className="navbar--desktop__list__element__link">repas</Link>
           </li>
-          <li className="navbar--desktop__list__element">
-            <a href="/planning" className="navbar--desktop__list__element__link">planning</a>
+          <li className="navbar--desktop__list__element" onClick={handleCloseMenu}>
+            <Link to="/planning" className="navbar--desktop__list__element__link">planning</Link>
           </li>
-          <li className="navbar--desktop__list__element">
-            <a href="/account" className="navbar--desktop__list__element__link">compte</a>
+          <li className="navbar--desktop__list__element" onClick={handleCloseMenu}>
+            <Link to="/account" className="navbar--desktop__list__element__link">compte</Link>
           </li>
-          <li className="navbar--desktop__list__element">
-            <a href="/logout" className="navbar--desktop__list__element__link">déconnexion</a>
+          <li className="navbar--desktop__list__element" onClick={handleCloseMenu}>
+            <Link to="/logout" className="navbar--desktop__list__element__link">déconnexion</Link>
           </li>
         </ul>
       </nav>
@@ -41,20 +47,20 @@ const Header = () => {
       </div>
       <nav className={isMenuOpened ? "navbar" : "navbar navbar--open"}>
         <ul className="navbar__list">
-          <li className="navbar__list__element">
-            <a href="/" className="navbar__list__element__link">accueil</a>
+          <li className="navbar__list__element" onClick={handleCloseMenu}>
+            <Link to="/" className="navbar__list__element__link">accueil</Link>
           </li>
-          <li className="navbar__list__element">
-            <a href="/meals" className="navbar__list__element__link">repas</a>
+          <li className="navbar__list__element" onClick={handleCloseMenu}>
+            <Link to="/meals" className="navbar__list__element__link">repas</Link>
           </li>
-          <li className="navbar__list__element">
-            <a href="/planning" className="navbar__list__element__link">planning</a>
+          <li className="navbar__list__element" onClick={handleCloseMenu}>
+            <Link to="/planning" className="navbar__list__element__link">planning</Link>
           </li>
-          <li className="navbar__list__element">
-            <a href="/account" className="navbar__list__element__link">compte</a>
+          <li className="navbar__list__element" onClick={handleCloseMenu}>
+            <Link to="/account" className="navbar__list__element__link">compte</Link>
           </li>
-          <li className="navbar__list__element">
-            <a href="/logout" className="navbar__list__element__link">déconnexion</a>
+          <li className="navbar__list__element" onClick={handleCloseMenu}>
+            <Link to="/logout" className="navbar__list__element__link">déconnexion</Link>
           </li>
         </ul>
       </nav>
