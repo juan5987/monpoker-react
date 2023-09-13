@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logo from '../assets/logo_rouge.png'
 import '../styles/header.sass';
 import '../styles/header-desktop.sass';
 
@@ -10,6 +11,7 @@ const Header = () => {
     <>
       <div className='header'>
         <div className="header__logo">
+          <img src={logo} alt="logo" className="header__logo__img" width={40} />
           <span className='header__logo__text'>monpoker</span>
         </div>
         <nav className="navbar--desktop">
