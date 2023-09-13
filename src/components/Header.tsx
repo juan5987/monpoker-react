@@ -17,7 +17,7 @@ const Header = () => {
           <span className="header__burger__line"></span>
         </div>
       </div>
-      <nav className={isMenuOpened ? "navbar" : "navbar--open"}>
+      <nav className={isMenuOpened ? "navbar" : "navbar navbar--open"}>
         <ul className="navbar__list">
           <li className="navbar__list__element">
             <a href="/" className="navbar__list__element__link">accueil</a>
