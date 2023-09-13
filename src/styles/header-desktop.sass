@@ -1,0 +1,25 @@
+@media all and (min-width: 650px)
+    .navbar, .header__burger
+        display: none
+
+    .navbar--desktop
+        display: block
+        height: 100%
+
+        &__list
+            display: flex
+            height: 100%
+
+            &__element
+                margin-right: 1rem
+                height: 100%
+                display: flex
+                align-items: center
+                cursor: pointer
+
+                &:hover &__link
+                    color: orange
+                
+                &__link
+                    color: rgb(241,241,241)
+                    text-transform: uppercase
