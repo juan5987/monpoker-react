@@ -1,6 +1,7 @@
 import React from 'react'
 import Tournament from './components/Tournament'
 import '../../styles/tournaments.sass'
+import '../../styles/tournaments-desktop.sass'
 
 const Tournaments = () => {
 
