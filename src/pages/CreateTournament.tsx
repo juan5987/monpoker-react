@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/create-tournament.sass'
+import '../styles/create-tournament-desktop.sass'
 
 const CreateTournament = () => {
     return (
