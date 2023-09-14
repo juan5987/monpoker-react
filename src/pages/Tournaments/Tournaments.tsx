@@ -2,11 +2,16 @@ import React from 'react'
 import Tournament from './components/Tournament'
 import '../../styles/tournaments.sass'
 
-const Home = () => {
+const Tournaments = () => {
+
   return (
     <div className='tournaments'>
       <div className="tournaments__title">
         <h2 className='tournaments__title__text'>Mes tournois</h2>
+        <div className="tournaments__title__button">
+          <div className="tournaments__title__button__plus">+</div>
+          <span className="tournaments__title__button__text">créer</span>
+        </div>
       </div>
       <section className="tournaments__searchbar">
         <input type="text" className="tournaments__searchbar__input" id="searchbar" name="searchbar" placeholder='rechercher un tournoi par nom' />
@@ -67,4 +72,4 @@ const Home = () => {
   )
 }
 
-export default Home;
+export default Tournaments;

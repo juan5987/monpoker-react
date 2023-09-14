@@ -1,14 +1,6 @@
 import React from 'react'
+import { ITournament } from '../../../types/tournament'
 import '../../../styles/tournament.sass'
-
-interface ITournament {
-  status: string,
-  nom: string,
-  mise: number,
-  prix: number,
-  joueurs: number,
-  date: string,
-}
 
 const Tournament = ({status, nom, mise, prix, joueurs, date}:ITournament) => {
   return (
