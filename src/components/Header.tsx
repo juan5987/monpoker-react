@@ -26,10 +26,10 @@ const Header = () => {
             <Link to="/" className="navbar--desktop__list__element__link">accueil</Link>
           </li>
           <li className="navbar--desktop__list__element" onClick={handleCloseMenu}>
-            <Link to="/meals" className="navbar--desktop__list__element__link">repas</Link>
+            <Link to="/tournaments" className="navbar--desktop__list__element__link">tournois</Link>
           </li>
           <li className="navbar--desktop__list__element" onClick={handleCloseMenu}>
-            <Link to="/planning" className="navbar--desktop__list__element__link">planning</Link>
+            <Link to="/chips" className="navbar--desktop__list__element__link">jetons</Link>
           </li>
           <li className="navbar--desktop__list__element" onClick={handleCloseMenu}>
             <Link to="/account" className="navbar--desktop__list__element__link">compte</Link>
@@ -51,10 +51,10 @@ const Header = () => {
             <Link to="/" className="navbar__list__element__link">accueil</Link>
           </li>
           <li className="navbar__list__element" onClick={handleCloseMenu}>
-            <Link to="/meals" className="navbar__list__element__link">repas</Link>
+            <Link to="/tournaments" className="navbar__list__element__link">tournois</Link>
           </li>
           <li className="navbar__list__element" onClick={handleCloseMenu}>
-            <Link to="/planning" className="navbar__list__element__link">planning</Link>
+            <Link to="/chips" className="navbar__list__element__link">jetons</Link>
           </li>
           <li className="navbar__list__element" onClick={handleCloseMenu}>
             <Link to="/account" className="navbar__list__element__link">compte</Link>

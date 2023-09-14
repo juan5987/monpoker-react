@@ -1,0 +1,126 @@
+.tournaments
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    width: 100%
+
+    &__title
+        display: flex
+        align-items: center
+        margin: 0 .5rem 1rem .5rem
+        border-bottom: 2px solid rgb(30,30,30)
+
+        &__text
+            width: 100%
+            text-transform: uppercase
+            font-weight: bold
+            font-size: 1.3rem
+            padding-bottom: .25rem
+
+        &__button
+            display: flex
+            align-items: center
+            padding: .3em .6em
+            border-radius: 1rem
+            margin-bottom: .25rem
+            cursor: pointer
+            font-size: 1.5rem
+
+            &__plus
+                display: flex
+                justify-content: center
+                align-items: center
+                background-color: green
+                color: white
+                width: 20px
+                height: 20px
+                border-radius: 50%
+                margin-right: .5em
+
+            &__text
+                font-weight: bold
+                font-size: 1.2rem
+
+            &:hover
+                background-color: rgb(216, 216, 216)
+
+    &__searchbar
+        display: flex
+        flex-direction: column
+        margin-bottom: 1rem
+        padding: 0 1rem
+
+        &__input
+            font-size: 1.2rem
+            padding: .5em 1em
+            border: 2px solid rgb(30,30,30)
+            border-radius: 1em
+            background-color: rgb(240,240,240)
+
+            &::placeholder
+                font-size: .8rem
+                text-align: center
+
+    &__filters
+        display: flex
+        justify-content: space-between
+        margin-bottom: 1rem
+        padding: 0 1rem
+
+        &__element
+            display: flex
+            flex-direction: column
+
+            &__label
+                font-weight: bold
+                color: rgb(30,30,30)
+                margin-bottom: .3rem
+            
+            &__select, &__option
+                color: rgb(30,30,30)
+                font-size: 1rem
+                font-weight: bold
+                padding: .25em
+                border: 1px solid rgb(30,30,30)
+
+    &__legend
+        display: flex
+        justify-content: space-around
+        margin-bottom: 1rem
+
+        &__element
+            display: flex
+            flex-direction: column
+            align-items: center
+
+            &__box
+                width: 17px
+                height: 17px
+                margin-bottom: .25rem
+                border-radius: 3px
+
+                &--finished
+                    background-color: rgb(171, 39, 39)
+                    
+                &--pending
+                    background-color: rgb(9, 44, 100)
+
+            &__text
+                font-weight: bold
+
+                &--finished
+                    color: rgb(171, 39, 39)
+
+                &--pending
+                    color: rgb(9, 44, 100)
+
+    &__infos
+        font-size: 1rem
+        font-weight: bold
+        text-align: center
+        margin-bottom: .5rem
+
+    &__tournaments
+        max-height: calc(100vh - 340px)
+        overflow-y: scroll
+        padding: 0 .5rem

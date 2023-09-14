@@ -1,0 +1,62 @@
+.tournament
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 100%
+    background-color: rgb(9, 44, 100)
+    color: rgb(241,241,241)
+    margin-bottom: 1rem
+    transition: all .2s ease-in
+    cursor: pointer
+
+    &:hover
+        transform: scale(1.02)
+        box-shadow: 0 0 10px 0 rgba(0,0,0,.5)
+
+    &--finished
+        background-color: rgb(156, 4, 4)
+
+    &__title
+        display: flex
+        justify-content: center
+        border-bottom: 1px solid rgb(241,241,241)
+        text-align: center
+        border: 1px solid rgb(9, 44, 100)
+        padding: .5em 0
+
+        &--finished
+            border: 1px solid rgb(156, 4, 4)
+
+    &__info
+        display: flex
+        justify-content: space-between
+        align-items: center
+        background-color: rgb(241,241,241)
+        color: rgb(9, 44, 100)
+        border-top: none
+
+        &--finished
+            color: rgb(156, 4, 4)
+
+        &__element
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            flex: 1
+            padding: .25rem
+            border-radius: 1rem
+
+            &__label
+                text-align: center
+                color: rgb(30,30,30)
+                font-weight: bold
+                margin-bottom: .5rem
+                width: 100%
+
+            &__text
+                text-align: center
+                width: 100%
+                font-weight: bold
+
+

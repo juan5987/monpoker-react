@@ -1,0 +1,119 @@
+.createtournament
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    width: 100%
+    position: relative
+
+    &__apiError
+        background-color: rgb(241,241,241)
+        color: red
+        padding: 1rem
+        text-align: center
+        font-weight: bold
+        z-index: 1
+        border: 5px solid red
+        font-size: 1rem
+        border-radius: 1rem
+        width: 100%
+        position: absolute
+
+    &__title
+        display: flex
+        align-items: center
+        margin: 0 .5rem 2rem .5rem
+        border-bottom: 2px solid rgb(30,30,30)
+
+        &__text
+            width: 100%
+            text-transform: uppercase
+            font-weight: bold
+            font-size: 1.3rem
+            padding-bottom: .25rem
+
+    &__form
+        display: flex
+        flex-direction: column
+        padding: 0 1rem
+        max-height: calc(100vh - 250px)
+        overflow-y: auto
+
+        &__error
+            color: red
+            font-weight: bold
+            text-align: left
+            margin-top: .25rem
+
+        &__info
+            text-align: center
+            margin-bottom: 2rem
+            font-weight: bold
+            color: orange
+
+        &__element
+            display: flex
+            flex-direction: column
+            position: relative
+            margin-bottom: 1rem
+
+            &__label
+                color: rgb(30,30,30)
+                font-weight: bold
+                margin-bottom: .25rem
+                text-align: center
+                font-size: 1rem
+                text-transform: uppercase
+
+            &__input
+                padding: .75em
+                border-bottom: 1px solid rgb(30,30,30)
+                font-size: 1.1rem
+                font-weight: bold
+                background-color: rgb(240, 240, 240)
+                color: orange
+                text-align: center
+
+                &::placeholder
+                    color: rgb(255, 206, 120)
+
+        &__buttons
+            display: flex
+            justify-content: space-between
+
+        &__submit
+            margin: 0 auto
+            padding: .5rem 1rem
+            background-color: orange
+            color: rgb(241,241,241)
+            font-weight: bold
+            font-size: 1.1rem
+            text-transform: uppercase
+            cursor: pointer
+            transition: all .2s ease-in-out
+            border-radius: 1em
+
+            &:hover
+                background-color: rgb(255, 195, 98)
+                color: rgb(240, 240, 240)
+
+        &__cancel
+            margin: 0 auto
+            padding: .5rem 1rem
+            background-color: rgb(30,30,30)
+            color: rgb(241,241,241)
+            font-weight: bold
+            font-size: 1.1rem
+            text-transform: uppercase
+            cursor: pointer
+            transition: all .2s ease-in-out
+            border-radius: 1em
+
+            &:hover
+                background-color: rgb(101, 101, 101)
+                color: rgb(240, 240, 240)
+
+
+.loading
+    font-size: 2rem
+    display: flex
+    justify-content: center
