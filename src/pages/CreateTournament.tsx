@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useForm } from "react-hook-form"
 import { createTournament } from '../services/apiCreateTournament'
+import { Link } from 'react-router-dom'
 import { ITournament } from '../types/tournament'
 import '../styles/create-tournament.sass'
 import '../styles/create-tournament-desktop.sass'
@@ -74,7 +75,10 @@ const CreateTournament = () => {
                         <option className='createtournament__form__element__input__option' value="terminé">terminé</option>
                     </select>
                 </div>
-                <button className='createtournament__form__submit' type="submit">Valider</button>
+                <div className="createtournament__form__buttons">
+                    <Link to="/tournaments" className='createtournament__form__cancel'>Annuler</Link>
+                    <button className='createtournament__form__submit' type="submit">Valider</button>
+                </div>
             </form>
             {
                 apiError && <div className='createtournament__apiError'>
