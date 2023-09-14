@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Tournament from './components/Tournament'
 import '../../styles/tournaments.sass'
 import '../../styles/tournaments-desktop.sass'
@@ -9,10 +10,10 @@ const Tournaments = () => {
     <div className='tournaments'>
       <div className="tournaments__title">
         <h2 className='tournaments__title__text'>Mes tournois</h2>
-        <button className="tournaments__title__button">
+        <Link to="/create/tournament" className="tournaments__title__button">
           <div className="tournaments__title__button__plus">+</div>
           <span className="tournaments__title__button__text">créer</span>
-        </button>
+        </Link>
       </div>
       <section className="tournaments__searchbar">
         <input type="text" className="tournaments__searchbar__input" id="searchbar" name="searchbar" placeholder='rechercher un tournoi par nom' />
