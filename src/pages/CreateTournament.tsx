@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { useForm } from "react-hook-form"
 import { createTournament } from '../services/apiCreateTournament'
 import { ITournament } from '../types/tournament'
@@ -8,16 +8,31 @@ import '../styles/create-tournament-desktop.sass'
 const CreateTournament = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const [loading, setLoading] = useState<boolean>(false);
     const [apiError, setApiError] = useState<string>('');
 
     const onSubmit = async (data: any) => {
         try {
+            setLoading(true);
             const response = await createTournament(data);
+            setLoading(false);
             setApiError('');
             console.log(response)
-        } catch (error:any) {
+        } catch (error: any) {
+            setLoading(false);
             setApiError(error.message);
         }
+    }
+
+    if (loading) {
+        return (
+            <section className='createtournament'>
+                <div className="createtournament__title">
+                    <h2 className='createtournament__title__text'>Créer un tournoi</h2>
+                </div>
+                <div className='loading'>Chargement en cours...</div>
+            </section>
+        )
     }
 
     return (
