@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { useForm } from "react-hook-form"
 import { createTournament } from '../services/apiCreateTournament'
 import { ITournament } from '../types/tournament'
@@ -7,13 +7,16 @@ import '../styles/create-tournament-desktop.sass'
 
 const CreateTournament = () => {
 
-    const { register, handleSubmit, formState: { errors } } = useForm()
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const [apiError, setApiError] = useState<string>('');
+
     const onSubmit = async (data: any) => {
         try {
             const response = await createTournament(data);
+            setApiError('');
             console.log(response)
         } catch (error:any) {
-            console.log(error.message)
+            setApiError(error.message);
         }
     }
 
@@ -58,6 +61,12 @@ const CreateTournament = () => {
                 </div>
                 <button className='createtournament__form__submit' type="submit">Valider</button>
             </form>
+            {
+                apiError && <div className='createtournament__apiError'>
+                    <p role="alert" className='createtournament__apiError__text'>{apiError}</p>
+                    <p role="alert" className='createtournament__apiError__text'>Contactez un administrateur ou réessayez dans quelques minutes</p>
+                </div>
+            }
         </section>
     )
 }
