@@ -6,7 +6,11 @@
     background-color: rgb(9, 44, 100)
     color: rgb(241,241,241)
     margin-bottom: 1rem
-    border-radius: .5rem
+    transition: all .2s ease-in
+
+    &:hover
+        transform: scale(1.02)
+        box-shadow: 0 0 10px 0 rgba(0,0,0,.5)
 
     &--finished
         background-color: rgb(156, 4, 4)
@@ -18,7 +22,6 @@
         text-align: center
         border: 1px solid rgb(9, 44, 100)
         padding: .5em 0
-        border-radius: .5rem
 
         &--finished
             border: 1px solid rgb(156, 4, 4)
@@ -29,13 +32,10 @@
         align-items: center
         background-color: rgb(241,241,241)
         color: rgb(9, 44, 100)
-        border: 2px solid rgb(9, 44, 100)
         border-top: none
-        border-radius: 0 0 .5rem .5rem
 
         &--finished
             color: rgb(156, 4, 4)
-            border: 2px solid rgb(156, 4, 4)
 
         &__element
             display: flex

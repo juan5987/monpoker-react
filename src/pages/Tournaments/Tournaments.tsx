@@ -9,10 +9,10 @@ const Tournaments = () => {
     <div className='tournaments'>
       <div className="tournaments__title">
         <h2 className='tournaments__title__text'>Mes tournois</h2>
-        <div className="tournaments__title__button">
+        <button className="tournaments__title__button">
           <div className="tournaments__title__button__plus">+</div>
           <span className="tournaments__title__button__text">créer</span>
-        </div>
+        </button>
       </div>
       <section className="tournaments__searchbar">
         <input type="text" className="tournaments__searchbar__input" id="searchbar" name="searchbar" placeholder='rechercher un tournoi par nom' />
@@ -46,6 +46,7 @@ const Tournaments = () => {
             <span className="tournaments__legend__element__text tournaments__legend__element__text--finished">terminé</span>
           </div>
         </section>
+        <span className='tournaments__infos'>Cliquez sur un tournoi pour plus d'infos</span>
       <section className="tournaments__tournaments">
         <Tournament status="pending" nom="Mon tournoi du samedi" mise={10} prix={50} joueurs={5} date='26/09/2023'/>
         <Tournament status="finished" nom="Tournoi d'anniversaire" mise={5} prix={40} joueurs={8} date='26/09/2023'/>
