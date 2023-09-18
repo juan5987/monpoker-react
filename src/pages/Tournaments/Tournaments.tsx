@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { getTournaments } from '../../services/apiGetTournaments'
 import Tournament from './components/Tournament'
 import '../../styles/tournaments.sass'
 import '../../styles/tournaments-desktop.sass'
+import { ITournament } from '../../types/tournament'
 
 const Tournaments = () => {
+
+  const [tournaments, setTournaments] = useState<ITournament[]>([]);
+
+  useEffect(() => {
+    const response = getTournaments(1);
+    response && response.then((data: ITournament[]) => {
+      setTournaments(data);
+    }
+    );
+  }, []);
 
   return (
     <div className='tournaments'>
@@ -43,27 +55,23 @@ const Tournaments = () => {
       </section>
       <span className='tournaments__infos'>Cliquez sur un tournoi pour plus d'infos</span>
       <section className="tournaments__tournaments">
-        <Tournament status="prévu" nom="Tournoi du samedi 1" mise={10} prix={50} joueurs={5} date='26/09/2023' />
-        <Tournament status="terminé" nom="Tournoi d'anniversaire" mise={5} prix={40} joueurs={8} date='26/09/2023' />
-        <Tournament status="prévu" nom="Chez Fred" mise={10} prix={40} joueurs={4} date='26/09/2023' />
-        <Tournament status="prévu" nom="Chez Wam" mise={50} prix={300} joueurs={6} date='26/09/2023' />
-        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
-        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
-        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
-        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
-        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
-        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
-        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
-        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
-        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
-        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
-        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
-        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
-        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
-        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
-        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
-        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
-        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
+
+        {
+          tournaments.length > 0 && tournaments.map((tournament: ITournament) =>
+          (
+            <Tournament
+              key={tournament.id}
+              status={tournament.status}
+              nom={tournament.nom}
+              mise={tournament.mise}
+              prix={tournament.prix}
+              joueurs={tournament.joueurs}
+              date={tournament.date}
+            />
+          ))
+        }
+
+
       </section>
     </div>
   )

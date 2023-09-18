@@ -1,0 +1,43 @@
+{
+  "tournaments": [
+    {
+      "nom": "aze",
+      "date": "2023-09-23",
+      "joueurs": "5",
+      "mise": "5",
+      "prix": "5",
+      "status": "prévu",
+      "id": 1,
+      "userId": 1
+    },
+    {
+      "nom": "2",
+      "date": "2023-09-23",
+      "joueurs": "5",
+      "mise": "5",
+      "prix": "5",
+      "status": "terminé",
+      "id": 2,
+      "userId": 1
+    },
+    {
+      "nom": "jkljkljkl",
+      "date": "2023-09-11",
+      "joueurs": "1",
+      "mise": "1",
+      "prix": "1",
+      "statut": "prévu",
+      "id": 3
+    },
+    {
+      "nom": "aaa",
+      "date": "2023-09-14",
+      "joueurs": "12",
+      "mise": "12",
+      "prix": "12",
+      "statut": "prévu",
+      "userId": 1,
+      "id": 4
+    }
+  ]
+}

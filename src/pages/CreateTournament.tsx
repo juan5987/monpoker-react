@@ -45,7 +45,7 @@ const CreateTournament = () => {
             <form className="createtournament__form" onSubmit={handleSubmit(onSubmit)}>
                 <div className="createtournament__form__element">
                     <label htmlFor="name" className="createtournament__form__element__label">Nom du tournoi</label>
-                    <input type="text" className="createtournament__form__element__input" id="name" {...register("name", { required: true })} />
+                    <input type="text" className="createtournament__form__element__input" id="name" {...register("nom", { required: true })} />
                     {errors.name?.type === 'required' && <p role="alert" className='createtournament__form__error'>Veuillez renseigner le nom du tournoi</p>}
                 </div>
                 <div className="createtournament__form__element">
@@ -55,22 +55,22 @@ const CreateTournament = () => {
                 </div>
                 <div className="createtournament__form__element">
                     <label htmlFor="players" className="createtournament__form__element__label">Nombre de joueurs</label>
-                    <input type="number" className="createtournament__form__element__input" id="players" step={1} {...register("players", { required: true })} />
+                    <input type="number" className="createtournament__form__element__input" id="players" step={1} {...register("joueurs", { required: true })} />
                     {errors.players?.type === 'required' && <p role="alert" className='createtournament__form__error'>Veuillez renseigner le nombre de joueurs</p>}
                 </div>
                 <div className="createtournament__form__element">
                     <label htmlFor="buyin" className="createtournament__form__element__label">Mise</label>
-                    <input type="number" className="createtournament__form__element__input" id="buyin" step={1} placeholder='€' {...register("buyin", { required: true })} />
+                    <input type="number" className="createtournament__form__element__input" id="buyin" step={1} placeholder='€' {...register("mise", { required: true })} />
                     {errors.buyin?.type === 'required' && <p role="alert" className='createtournament__form__error'>Veuillez renseigner la mise</p>}
                 </div>
                 <div className="createtournament__form__element">
                     <label htmlFor="prize" className="createtournament__form__element__label">Prix</label>
-                    <input type="number" className="createtournament__form__element__input" id="prize" step={1} placeholder='€' {...register("prize", { required: true })} />
+                    <input type="number" className="createtournament__form__element__input" id="prize" step={1} placeholder='€' {...register("prix", { required: true })} />
                     {errors.prize?.type === 'required' && <p role="alert" className='createtournament__form__error'>Veuillez renseigner le prix</p>}
                 </div>
                 <div className="createtournament__form__element">
                     <label htmlFor="prize" className="createtournament__form__element__label">Statut</label>
-                    <select className="createtournament__form__element__input" id="prize" {...register("status", { required: true })}>
+                    <select className="createtournament__form__element__input" id="prize" {...register("statut", { required: true })}>
                         <option className='createtournament__form__element__input__option' value="prévu">prévu</option>
                         <option className='createtournament__form__element__input__option' value="terminé">terminé</option>
                     </select>
