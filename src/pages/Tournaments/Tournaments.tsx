@@ -37,39 +37,33 @@ const Tournaments = () => {
           </select>
         </div>
       </section>
-      <section className="tournaments__legend">
-          <div className="tournaments__legend__element">
-            <div className="tournaments__legend__element__box tournaments__legend__element__box--pending"></div>
-            <span className="tournaments__legend__element__text tournaments__legend__element__text--pending">prévu</span>
-          </div>
-          <div className="tournaments__legend__element">
-            <div className="tournaments__legend__element__box tournaments__legend__element__box--finished"></div>
-            <span className="tournaments__legend__element__text tournaments__legend__element__text--finished">terminé</span>
-          </div>
-        </section>
-        <span className='tournaments__infos'>Cliquez sur un tournoi pour plus d'infos</span>
+      <section className="tournaments__checkbox">
+        <input type="checkbox" className="tournaments__checkbox__input" checked />
+        <label htmlFor="checkbox" className="tournaments__checkbox__label">afficher les tournois terminés</label>
+      </section>
+      <span className='tournaments__infos'>Cliquez sur un tournoi pour plus d'infos</span>
       <section className="tournaments__tournaments">
-        <Tournament status="pending" nom="Mon tournoi du samedi" mise={10} prix={50} joueurs={5} date='26/09/2023'/>
-        <Tournament status="finished" nom="Tournoi d'anniversaire" mise={5} prix={40} joueurs={8} date='26/09/2023'/>
-        <Tournament status="pending" nom="Chez Fred" mise={10} prix={40} joueurs={4} date='26/09/2023'/>
-        <Tournament status="pending" nom="Chez Wam" mise={50} prix={300} joueurs={6} date='26/09/2023'/>
-        <Tournament status="finished" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023'/>
-        <Tournament status="finished" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023'/>
-        <Tournament status="finished" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023'/>
-        <Tournament status="finished" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023'/>
-        <Tournament status="finished" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023'/>
-        <Tournament status="finished" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023'/>
-        <Tournament status="finished" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023'/>
-        <Tournament status="finished" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023'/>
-        <Tournament status="finished" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023'/>
-        <Tournament status="finished" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023'/>
-        <Tournament status="finished" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023'/>
-        <Tournament status="finished" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023'/>
-        <Tournament status="finished" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023'/>
-        <Tournament status="finished" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023'/>
-        <Tournament status="finished" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023'/>
-        <Tournament status="finished" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023'/>
-        <Tournament status="finished" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023'/>
+        <Tournament status="prévu" nom="Tournoi du samedi 1" mise={10} prix={50} joueurs={5} date='26/09/2023' />
+        <Tournament status="terminé" nom="Tournoi d'anniversaire" mise={5} prix={40} joueurs={8} date='26/09/2023' />
+        <Tournament status="prévu" nom="Chez Fred" mise={10} prix={40} joueurs={4} date='26/09/2023' />
+        <Tournament status="prévu" nom="Chez Wam" mise={50} prix={300} joueurs={6} date='26/09/2023' />
+        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
+        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
+        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
+        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
+        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
+        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
+        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
+        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
+        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
+        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
+        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
+        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
+        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
+        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
+        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
+        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
+        <Tournament status="terminé" nom="test" mise={5} prix={25} joueurs={5} date='26/09/2023' />
       </section>
     </div>
   )
